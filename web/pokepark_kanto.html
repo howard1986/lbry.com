@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>PokéPark KANTO 抽籤流程</title>
+<style>
+body {font-family: Arial, sans-serif; background: #f9f9f9; display: flex; flex-direction: column; align-items: center; padding: 20px;}
+.container {display: flex; flex-direction: column; align-items: center; max-width: 800px;}
+.box {border: 2px solid #4a90e2; border-radius: 12px; padding: 16px; margin: 12px 0; width: 100%; text-align: left; background: #ffffff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-weight: bold; color: #333;}
+.arrow {font-size: 32px; color: #4a90e2; margin: 8px 0; align-self: center;}
+.info-panel {background: #e8f4fd; border: 1px solid #4a90e2; border-radius: 8px; padding: 12px; margin: 10px 0; width: 100%;}
+.info-panel h3 {margin-top: 0; color: #4a90e2;}
+.info-panel ul {margin: 0; padding-left: 20px;}
+.toggle-btn {background: #4a90e2; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; margin: 5px 0;}
+.hidden {display: none;}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 style="text-align: center; color: #4a90e2;">PokéPark KANTO 抽籤申請流程</h1>
+  
+  <div class="info-panel">
+    <h3>所需知識</h3>
+    <button class="toggle-btn" onclick="toggleInfo('rules')">抽籤規則</button>
+    <div id="rules" class="hidden">
+      <ul>
+        <li>抽籤對象：限日本居民，用日本手機SMS註冊會員。海外遊客後續開放直購（約2025年12月起）。</li>
+        <li>註冊：官網會員需+81號碼SMS驗證，非電話。</li>
+        <li>時間：2025/11/21 18:00（JST）開啟，抽籤結果約12月公告。</li>
+        <li>付款：中籤後12/21-31信用卡付，獲QR碼數位票（email/帳號下載）。</li>
+        <li>入園：2026/2/5開園，掃QR+護照換手環，含讀賣樂園入場。</li>
+        <li>票價：Trainer’s Pass成人¥7,900；Ace Trainer’s Pass¥12,900（約NT$1,650-2,700，依匯率）。</li>
+        <li>風險：虛擬號重用可能碼被截，建議備用email；官網支援繁中。流程符合國內抽籤規則，但虛擬號繞過風險自負，可能違約導致無效。</li>
+      </ul>
+    </div>
+    <button class="toggle-btn" onclick="toggleInfo('costs')">成本細節</button>
+    <div id="costs" class="hidden">
+      <ul>
+        <li>虛擬號：NT$50-200/次（單次SMS）。</li>
+        <li>票價：如上。</li>
+        <li>無手續費，國際卡直付。</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="box">1. 11/21 18:00<br>訪問 YuyiBuy 購買日本SMS（https://www.yuyibuy.com/collections/japan-sms-verification-1/products/sms-jp）</div>
+  <div class="arrow">↓</div>
+  <div class="box">2. 獲 +81 號碼<br>（限時10-30分，單次接收1條驗證碼）</div>
+  <div class="arrow">↓</div>
+  <div class="box">3. 官網註冊（https://www.pokepark-kanto.co.jp/）<br>輸入該號碼</div>
+  <div class="arrow">↓</div>
+  <div class="box">4. 官網發SMS<br>YuyiBuy顯示驗證碼</div>
+  <div class="arrow">↓</div>
+  <div class="box">5. 複製碼輸入官網<br>完成註冊</div>
+  <div class="arrow">↓</div>
+  <div class="box">6. 登入申請抽籤<br>提交（選日期、張數）</div>
+</div>
+
+<script>
+function toggleInfo(id) {
+  const elem = document.getElementById(id);
+  elem.classList.toggle('hidden');
+}
+</script>
+</body>
+</html>
